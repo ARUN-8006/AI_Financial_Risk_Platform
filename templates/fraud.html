@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Fraud Detection AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<nav>
+    <h2>FinRisk AI</h2>
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+</nav>
+
+<div class="form-box">
+    <h1>AI Fraud Detection</h1>
+
+    <form method="POST">
+        <input type="number" name="amount" placeholder="Transaction Amount" required>
+        <input type="number" name="hour" placeholder="Transaction Hour 0-23" required>
+        <input type="number" name="location_risk" placeholder="Location Risk 1-10" required>
+        <input type="number" name="device_risk" placeholder="Device Risk 1-10" required>
+        <input type="number" name="failed_attempts" placeholder="Previous Failed Attempts" required>
+
+        <button type="submit">Analyze Transaction</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+        <p>{{ result }}</p>
+        <p>Fraud Probability: {{ fraud_probability }}%</p>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

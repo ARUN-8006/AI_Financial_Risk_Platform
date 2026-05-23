@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel - FinRisk AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<nav>
+    <h2>FinRisk AI</h2>
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/loan">Loan AI</a>
+    <a href="/fraud">Fraud AI</a>
+    <a href="/credit-score">Credit Score</a>
+    <a href="/chatbot">AI Chatbot</a>
+    <a href="/report">Reports</a>
+    <a href="/logout">Logout</a>
+</nav>
+
+<h1 class="page-title">Admin Control Panel</h1>
+
+<section class="dashboard">
+    <div class="dash-card">
+        <h3>Total Users</h3>
+        <h2>{{ users|length }}</h2>
+        <p>Registered customers</p>
+    </div>
+
+    <div class="dash-card success">
+        <h3>Applications</h3>
+        <h2>{{ applications|length }}</h2>
+        <p>Loan & credit requests</p>
+    </div>
+
+    <div class="dash-card danger">
+        <h3>Fraud Logs</h3>
+        <h2>{{ fraud_logs|length }}</h2>
+        <p>AI security alerts</p>
+    </div>
+
+    <div class="dash-card warning">
+        <h3>System Status</h3>
+        <h2>Live</h2>
+        <p>AI engine active</p>
+    </div>
+</section>
+
+<section class="admin-grid">
+
+    <div class="admin-box">
+        <h2>User Risk Profiles</h2>
+
+        <table>
+            <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Risk</th>
+                <th>Credit Score</th>
+            </tr>
+
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>
+                    <span class="risk-badge {{ user.risk|lower }}">
+                        {{ user.risk }}
+                    </span>
+                </td>
+                <td>{{ user.score }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="admin-box">
+        <h2>Applications</h2>
+
+        <table>
+            <tr>
+                <th>Application ID</th>
+                <th>Type</th>
+                <th>Status</th>
+            </tr>
+
+            {% for app in applications %}
+            <tr>
+                <td>{{ app.app_id }}</td>
+                <td>{{ app.type }}</td>
+                <td>{{ app.status }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="admin-box full-width">
+        <h2>Fraud Monitoring Logs</h2>
+
+        <table>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Amount</th>
+                <th>Risk Level</th>
+                <th>Action</th>
+            </tr>
+
+            {% for log in fraud_logs %}
+            <tr>
+                <td>{{ log.txn }}</td>
+                <td>₹{{ log.amount }}</td>
+                <td>
+                    <span class="risk-badge {{ log.risk|lower }}">
+                        {{ log.risk }}
+                    </span>
+                </td>
+                <td>Review</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</section>
+<section class="admin-box full-width" style="width:90%; margin:50px auto;">
+    <h2>Saved Loan Predictions</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Income</th>
+            <th>Loan Amount</th>
+            <th>Result</th>
+            <th>Risk Score</th>
+        </tr>
+        {% for r in loan_records %}
+        <tr>
+            <td>{{ r.id }}</td>
+            <td>₹{{ r.income }}</td>
+            <td>₹{{ r.loan_amount }}</td>
+            <td>{{ r.result }}</td>
+            <td>{{ r.risk_score }}%</td>
+        </tr>
+        {% endfor %}
+    </table>
+</section>
+
+<section class="admin-box full-width" style="width:90%; margin:50px auto;">
+    <h2>Saved Fraud Predictions</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Amount</th>
+            <th>Hour</th>
+            <th>Result</th>
+            <th>Fraud %</th>
+        </tr>
+        {% for r in fraud_records %}
+        <tr>
+            <td>{{ r.id }}</td>
+            <td>₹{{ r.amount }}</td>
+            <td>{{ r.hour }}</td>
+            <td>{{ r.result }}</td>
+            <td>{{ r.fraud_probability }}%</td>
+        </tr>
+        {% endfor %}
+    </table>
+</section>
+
+<section class="admin-box full-width" style="width:90%; margin:50px auto;">
+    <h2>Saved Credit Score Predictions</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Income</th>
+            <th>Score</th>
+            <th>Category</th>
+        </tr>
+        {% for r in credit_records %}
+        <tr>
+            <td>{{ r.id }}</td>
+            <td>₹{{ r.income }}</td>
+            <td>{{ r.score }}</td>
+            <td>{{ r.category }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</section>
+</body>
+</html>

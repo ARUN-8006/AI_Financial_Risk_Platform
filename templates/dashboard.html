@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced Risk Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<nav>
+    <h2>FinRisk AI</h2>
+    <a href="/">Home</a>
+    <a href="/loan">Loan AI</a>
+    <a href="/fraud">Fraud AI</a>
+    <a href="/credit-score">Credit Score</a>
+    <a href="/report">Reports</a>
+    <a href="/admin">Admin</a>
+    <a href="/chatbot">AI Chatbot</a>
+    
+</nav>
+
+<h1 class="page-title">AI Risk Intelligence Dashboard</h1>
+
+<section class="dashboard">
+    <div class="dash-card">
+        <h3>Total Applications</h3>
+        <h2>{{ stats.total_applications }}</h2>
+        <p>All processed requests</p>
+    </div>
+
+    <div class="dash-card success">
+        <h3>Approved Loans</h3>
+        <h2>{{ stats.approved_loans }}</h2>
+        <p>Low-risk customers</p>
+    </div>
+
+    <div class="dash-card danger">
+        <h3>Fraud Alerts</h3>
+        <h2>{{ stats.fraud_alerts }}</h2>
+        <p>Suspicious activities</p>
+    </div>
+
+    <div class="dash-card warning">
+        <h3>High Risk Users</h3>
+        <h2>{{ stats.high_risk_users }}</h2>
+        <p>Need manual review</p>
+    </div>
+
+    <div class="dash-card">
+        <h3>Avg Credit Score</h3>
+        <h2>{{ stats.avg_credit_score }}</h2>
+        <p>Portfolio health</p>
+    </div>
+</section>
+
+<section class="advanced-grid">
+
+    <div class="analytics-box">
+        <h2>Loan Approval Analytics</h2>
+        <canvas id="loanChart"></canvas>
+    </div>
+
+    <div class="analytics-box">
+        <h2>Fraud Risk Distribution</h2>
+        <canvas id="fraudChart"></canvas>
+    </div>
+
+    <div class="analytics-box">
+        <h2>Monthly Risk Trend</h2>
+        <canvas id="riskTrendChart"></canvas>
+    </div>
+
+    <div class="analytics-box">
+        <h2>Credit Score Segments</h2>
+        <canvas id="creditChart"></canvas>
+    </div>
+
+</section>
+
+<section class="table-section">
+    <h2>Live AI Alerts</h2>
+
+    <table>
+        <tr>
+            <th>Alert Type</th>
+            <th>User / ID</th>
+            <th>Risk Level</th>
+            <th>Amount</th>
+            <th>Status</th>
+        </tr>
+
+        {% for alert in recent_alerts %}
+        <tr>
+            <td>{{ alert.type }}</td>
+            <td>{{ alert.user }}</td>
+            <td>
+                <span class="risk-badge {{ alert.risk|lower }}">
+                    {{ alert.risk }}
+                </span>
+            </td>
+            <td>₹{{ alert.amount }}</td>
+            <td>Under Review</td>
+        </tr>
+        {% endfor %}
+    </table>
+</section>
+
+<script src="/static/js/main.js"></script>
+
+</body>
+</html>

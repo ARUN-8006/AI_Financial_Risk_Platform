@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AI PDF Report</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<nav>
+    <h2>FinRisk AI</h2>
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/loan">Loan AI</a>
+    <a href="/fraud">Fraud AI</a>
+    <a href="/credit-score">Credit Score</a>
+</nav>
+
+<div class="form-box">
+    <h1>Generate AI Risk PDF Report</h1>
+
+    <form method="POST">
+        <input type="text" name="customer_name" placeholder="Customer Name" required>
+
+        <input type="text" name="risk_type" placeholder="Risk Type: Loan / Fraud / Credit" required>
+
+        <input type="number" name="risk_score" placeholder="Risk Score 0-100" required>
+
+        <input type="text" name="decision" placeholder="Decision: Approved / Rejected / Review" required>
+
+        <button type="submit">Download PDF Report</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Score AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<nav>
+    <h2>FinRisk AI</h2>
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+</nav>
+
+<div class="form-box">
+    <h1>AI Credit Score Engine</h1>
+
+    <form method="POST">
+        <input type="number" name="income" placeholder="Monthly Income" required>
+        <input type="number" name="repayment" placeholder="Repayment Score 1-100" required>
+        <input type="number" name="debt" placeholder="Existing Debt" required>
+        <input type="number" name="credit_history" placeholder="Credit History Years" required>
+        <input type="number" name="late_payments" placeholder="Late Payments Count" required>
+
+        <button type="submit">Generate Credit Score</button>
+    </form>
+
+    {% if score %}
+    <div class="result">
+        <p>Your AI Credit Score: {{ score }}</p>
+        <p>{{ category }}</p>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

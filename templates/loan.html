@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Approval AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<nav>
+    <h2>FinRisk AI</h2>
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+</nav>
+
+<div class="form-box">
+    <h1>AI Loan Approval System</h1>
+
+    <form method="POST">
+        <input type="number" name="age" placeholder="Age" required>
+        <input type="number" name="income" placeholder="Monthly Income" required>
+        <input type="number" name="loan_amount" placeholder="Loan Amount" required>
+        <input type="number" name="credit_history" placeholder="Credit History Years" required>
+        <input type="number" name="existing_debt" placeholder="Existing Debt" required>
+        <input type="number" name="employment_years" placeholder="Employment Years" required>
+
+        <button type="submit">Predict Loan Risk</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+        <p>{{ result }}</p>
+        <p>AI Risk Score: {{ risk_score }}%</p>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

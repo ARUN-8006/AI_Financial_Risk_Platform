@@ -7,17 +7,6 @@ This platform predicts loan approval, detects suspicious transactions, generates
 
 https://ai-financial-risk-platform-2w66.onrender.com
 
-## Screenshots
-AI Fraud.jpeg
-AI Loan approval.jpeg
-AI credit score.jpeg
-Admin.jpeg
-Dashboard.jpeg
-Home .jpeg
-Report PDF.jpeg
-admin login.jpeg
-chatbot.jpeg
-
 ## Features
 
 - AI Loan Approval Prediction

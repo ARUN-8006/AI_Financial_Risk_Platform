@@ -5,7 +5,7 @@ This platform predicts loan approval, detects suspicious transactions, generates
 
 ## Live Demo
 
-Add your Render deployed link here.
+https://ai-financial-risk-platform-2w66.onrender.com
 
 ## Features
 
@@ -62,6 +62,7 @@ Explains loan rejection, fraud detection, credit score and risk decisions.
 
 ## Admin Login
 
-Username:
+Username or password:
 ```text
 admin
+admin123

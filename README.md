@@ -1,26 +1,24 @@
 # AI Financial Risk Intelligence Platform
 
-A professional AI-powered FinTech web application that predicts loan approval, detects fraud, generates credit scores, provides risk analytics dashboard, PDF reports and admin monitoring system.
+A professional AI-powered FinTech web application built using Flask, Machine Learning and SQLite.  
+This platform predicts loan approval, detects suspicious transactions, generates credit scores, provides dashboard analytics, PDF reports, chatbot explanation and admin monitoring.
 
 ## Live Demo
 
 Add your Render deployed link here.
 
-## GitHub Repository
-
-https://github.com/ARUN-8006/AI_Financial_Risk_Platform
-
 ## Features
 
 - AI Loan Approval Prediction
-- Fraud Detection
+- Fraud Detection System
 - Credit Score Engine
 - Real-Time Dashboard
-- Admin Login
-- Database Integration
-- PDF Reports
-- AI Chatbot
+- Admin Login System
+- SQLite Database Integration
+- PDF Risk Report Generator
+- AI Explanation Chatbot
 - Premium Animated UI
+- Deployment Ready Structure
 
 ## Tech Stack
 
@@ -28,36 +26,42 @@ https://github.com/ARUN-8006/AI_Financial_Risk_Platform
 - Flask
 - Machine Learning
 - Scikit-learn
+- Pandas
+- NumPy
 - SQLite
 - HTML
 - CSS
 - JavaScript
 - Chart.js
 - ReportLab
-- Render Deployment
+- Render
+- Git & GitHub
 
 ## Project Modules
 
-### Loan Approval AI
-Predicts whether a loan should be approved or rejected based on customer income, loan amount, credit history, debt and employment years.
+### 1. Loan Approval AI
+Predicts loan approval or rejection based on customer age, income, loan amount, credit history, existing debt and employment years.
 
-### Fraud Detection AI
-Detects suspicious transactions using transaction amount, time, device risk, location risk and failed attempts.
+### 2. Fraud Detection AI
+Detects suspicious transactions using transaction amount, transaction hour, location risk, device risk and previous failed attempts.
 
-### Credit Score Engine
-Generates a customer credit score using income, repayment behavior, credit history, debt and late payments.
+### 3. Credit Score Engine
+Generates customer credit score using monthly income, repayment score, debt, credit history and late payments.
 
-### Dashboard
-Displays risk analytics, fraud alerts, loan status and credit score segments using charts.
+### 4. Risk Dashboard
+Displays loan analytics, fraud alerts, credit score segments and monthly risk trends using charts.
 
-### Admin Panel
-Protected admin panel with login system and database-backed prediction history.
+### 5. Admin Panel
+Protected admin system with login authentication, user risk profiles, applications, fraud logs and prediction history.
 
-### PDF Report
-Generates professional AI risk reports.
+### 6. PDF Report Generator
+Generates professional AI risk reports for customers.
 
-## How to Run Locally
+### 7. AI Chatbot
+Explains loan rejection, fraud detection, credit score and risk decisions.
 
-```bash
-venv\Scripts\activate
-python app.py
+## Admin Login
+
+Username:
+```text
+admin

@@ -588,3 +588,177 @@ button {
         box-shadow: 0 0 15px rgba(0,234,255,0.45);
     }
 }
+/* ============================= */
+/* MOBILE STABILITY FIX */
+/* ============================= */
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media(max-width: 768px) {
+    .card,
+    .dash-card,
+    .form-box,
+    .analytics-box,
+    .admin-box,
+    .chat-container,
+    .login-card {
+        animation: fadeUp 0.5s ease both !important;
+        transform: none !important;
+        translate: none !important;
+    }
+
+    .hero::before,
+    .hero::after,
+    .cards::before,
+    .dashboard::before {
+        display: none !important;
+    }
+
+    .btn:hover,
+    button:hover,
+    .card:hover,
+    .dash-card:hover,
+    .analytics-box:hover,
+    .admin-box:hover {
+        transform: none !important;
+    }
+
+    .secondary {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+}
+/* ============================= */
+/* ULTRA PREMIUM CYBER UI */
+/* ============================= */
+
+.hero h1::after {
+    content: "AI Risk Intelligence";
+    display: block;
+    font-size: 22px;
+    margin-top: 18px;
+    letter-spacing: 4px;
+    color: #00ff99;
+    -webkit-text-fill-color: #00ff99;
+    animation: typingGlow 2s infinite alternate;
+}
+
+@keyframes typingGlow {
+    from {
+        opacity: 0.55;
+        text-shadow: 0 0 8px #00eaff;
+    }
+    to {
+        opacity: 1;
+        text-shadow: 0 0 25px #00ff99;
+    }
+}
+
+.card::after,
+.dash-card::after,
+.analytics-box::after,
+.admin-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid transparent;
+    background: linear-gradient(135deg, rgba(0,234,255,0.6), transparent, rgba(0,255,153,0.55)) border-box;
+    mask:
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.card,
+.dash-card,
+.analytics-box,
+.admin-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover::before,
+.dash-card:hover::before,
+.analytics-box:hover::before,
+.admin-box:hover::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: rgba(0,255,153,0.22);
+    filter: blur(55px);
+    left: -60px;
+    bottom: -60px;
+}
+
+.page-title::after {
+    content: "";
+    display: block;
+    width: 180px;
+    height: 3px;
+    margin: 15px auto 0;
+    background: linear-gradient(90deg, transparent, #00eaff, #00ff99, transparent);
+    animation: titleLine 2s infinite alternate;
+}
+
+@keyframes titleLine {
+    from {
+        width: 90px;
+        opacity: 0.5;
+    }
+    to {
+        width: 260px;
+        opacity: 1;
+    }
+}
+
+.result {
+    animation: resultPulse 2s infinite alternate;
+}
+
+@keyframes resultPulse {
+    from {
+        box-shadow: 0 0 12px rgba(0,234,255,0.25);
+    }
+    to {
+        box-shadow: 0 0 28px rgba(0,255,153,0.45);
+    }
+}
+
+input:focus {
+    border-color: #00ff99;
+    box-shadow: 0 0 18px rgba(0,255,153,0.35);
+}
+
+table {
+    box-shadow: 0 0 25px rgba(0,234,255,0.12);
+}
+
+tr {
+    transition: 0.25s;
+}
+
+tr:hover {
+    transform: scale(1.01);
+}
+
+@media(max-width: 768px) {
+    tr:hover {
+        transform: none !important;
+    }
+
+    .hero h1::after {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .page-title::after {
+        animation: none;
+        width: 120px;
+    }
+}

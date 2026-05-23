@@ -1,66 +1,63 @@
-# Hi, I'm Arun Kumar 👋
+# AI Financial Risk Intelligence Platform
 
-I am an aspiring AI/ML Engineer and Python Flask Developer focused on building real-world AI applications.
+A professional AI-powered FinTech web application that predicts loan approval, detects fraud, generates credit scores, provides risk analytics dashboard, PDF reports and admin monitoring system.
 
-## 🚀 About Me
+## Live Demo
 
-- Building AI and Machine Learning based web applications
-- Interested in FinTech, Fraud Detection, Risk Analytics and Data Science
-- Currently improving SQL, DSA and Machine Learning interview skills
-- Open to internships and fresher roles in AI/ML, Data Science and Python Development
+Add your Render deployed link here.
 
-## 🛠️ Skills
+## GitHub Repository
+
+https://github.com/ARUN-8006/AI_Financial_Risk_Platform
+
+## Features
+
+- AI Loan Approval Prediction
+- Fraud Detection
+- Credit Score Engine
+- Real-Time Dashboard
+- Admin Login
+- Database Integration
+- PDF Reports
+- AI Chatbot
+- Premium Animated UI
+
+## Tech Stack
 
 - Python
 - Flask
 - Machine Learning
 - Scikit-learn
 - SQLite
-- Pandas
-- NumPy
 - HTML
 - CSS
 - JavaScript
-- Git & GitHub
-- Deployment
+- Chart.js
+- ReportLab
+- Render Deployment
 
-## 📌 Featured Projects
+## Project Modules
 
-### 1. AI Financial Risk Intelligence Platform
+### Loan Approval AI
+Predicts whether a loan should be approved or rejected based on customer income, loan amount, credit history, debt and employment years.
 
-A company-level FinTech AI platform built with Flask, Machine Learning and SQLite.
+### Fraud Detection AI
+Detects suspicious transactions using transaction amount, time, device risk, location risk and failed attempts.
 
-Features:
-- AI Loan Approval Prediction
-- Fraud Detection System
-- Credit Score Engine
-- Real-Time Dashboard
-- Admin Login System
-- SQLite Database
-- PDF Risk Reports
-- AI Explanation Chatbot
-- Premium Animated UI
-- Deployed Web App
+### Credit Score Engine
+Generates a customer credit score using income, repayment behavior, credit history, debt and late payments.
 
-### 2. FinGuard AI Fraud Detection System
+### Dashboard
+Displays risk analytics, fraud alerts, loan status and credit score segments using charts.
 
-An AI-powered credit card fraud detection web application with modern animated UI.
+### Admin Panel
+Protected admin panel with login system and database-backed prediction history.
 
-Features:
-- Fraud Prediction
-- Flask Backend
-- Machine Learning Model
-- Animated UI
-- Deployed on Render
+### PDF Report
+Generates professional AI risk reports.
 
-## 📚 Currently Learning
+## How to Run Locally
 
-- Advanced SQL
-- DSA Basics
-- Machine Learning Interview Preparation
-- Backend Development
-
-## 📫 Connect With Me
-
-- GitHub: https://github.com/ARUN-8006
-- LinkedIn: Add your LinkedIn link here
+```bash
+venv\Scripts\activate
+python app.py
